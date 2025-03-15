@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    background-color: var(--light-pink);
+    background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.container {
+    background-color: var(--white);
+    max-width: 800px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.faq-headline {
+    display: flex;
+    gap: 2rem;
+}
+
+.faq-headline h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.accordion-container .accordion-item:not(:last-child) {
+    border-bottom: 2px solid var(--light-pink);
+}
+
+.accordion-item .icons img {
+    min-width: 30px;
+}
+
+.accordion-item .icons .minus-icon {
+    display: none;
+}
+
+.according-description {
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Transición más suave */
+}
+
+.according-description p {
+    color: var(--grayish-purple);
+    padding: 1.5rem 0;
+}
+
+.accordion-btn.active + .according-description {
+    max-height: 500px; /* Ajuste el max-height a un valor suficientemente grande */
+}
+
+.accordion-btn.active .plus-icon {
+    display: none;
+}
+
+.accordion-btn.active .minus-icon {
+    display: block;
+}
+
+@media (max-width: 540px) {
+    body {
+        background-image: url(/faq-accordion-main/assets/images/background-pattern-mobile.svg);
+    }
+}
