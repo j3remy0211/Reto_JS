@@ -18,4 +18,3 @@ accordionBtns.forEach(btn => {
         }
     });
 });
-

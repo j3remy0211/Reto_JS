@@ -13,7 +13,7 @@
 
 body {
     background-color: var(--light-pink);
-    background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-image: url(./faq-accordion-main/assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: 'Work Sans', sans-serif;
